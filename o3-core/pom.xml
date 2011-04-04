@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>de.nabcos.o3</groupId>
+    <artifactId>o3-parent</artifactId>
+    <version>0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>o3-core</artifactId>
+
+  <dependencies>
+  	<dependency>
+  		<groupId>com.google.sitebricks</groupId>
+  		<artifactId>sitebricks</artifactId>
+  		<version>0.8.3</version>
+  		<exclusions>
+  			<exclusion>
+  				<artifactId>guice</artifactId>
+  				<groupId>com.google.inject</groupId>
+  			</exclusion>
+  			<exclusion>
+  				<artifactId>guice-servlet</artifactId>
+  				<groupId>com.google.inject.extensions</groupId>
+  			</exclusion>
+  			<exclusion>
+  				<artifactId>guice-multibindings</artifactId>
+  				<groupId>com.google.inject.extensions</groupId>
+  			</exclusion>
+  		</exclusions>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.sonatype.sisu</groupId>
+  		<artifactId>sisu-inject-bean</artifactId>
+  		<version>2.2.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.sonatype.sisu.inject</groupId>
+  		<artifactId>guice-servlet</artifactId>
+  		<version>2.9.5</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.sonatype.sisu.inject</groupId>
+  		<artifactId>guice-multibindings</artifactId>
+  		<version>2.9.5</version>
+  	</dependency>
+  </dependencies>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jetty-maven-plugin</artifactId>
+            <version>7.2.2.v20101205</version>
+            <configuration>
+              <scanIntervalSeconds>10</scanIntervalSeconds>
+              <webAppConfig>
+                <contextPath>/o3</contextPath>
+              </webAppConfig>
+              <connectors>
+                <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+                  <port>7070</port>
+                  <maxIdleTime>60000</maxIdleTime>
+                </connector>
+            </connectors>
+            </configuration>
+        </plugin>
+
+    </plugins>
+  </build>
+
+
+</project>
