@@ -15,6 +15,7 @@
     <module>o3-db-simple</module>
     <module>o3-indexer-file</module>
     <module>o3-site</module>
+    <module>o3-audio-fingerprint</module>
   </modules>
 
   <properties>
