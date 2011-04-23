@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>de.nabcos.o3</groupId>
+    <groupId>de.speutel.oyster.o3</groupId>
     <artifactId>o3-parent</artifactId>
     <version>0.1-SNAPSHOT</version>
   </parent>
@@ -20,19 +20,19 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>de.nabcos.o3</groupId>
+      <groupId>de.speutel.oyster.o3</groupId>
       <artifactId>o3-core</artifactId>
       <version>0.1-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <groupId>de.nabcos.o3</groupId>
+      <groupId>de.speutel.oyster.o3</groupId>
       <artifactId>o3-db-simple</artifactId>
       <version>0.1-SNAPSHOT</version>
       <type>jar</type>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>de.nabcos.o3</groupId>
+      <groupId>de.speutel.oyster.o3</groupId>
       <artifactId>o3-indexer-file</artifactId>
       <version>0.1-SNAPSHOT</version>
       <type>jar</type>

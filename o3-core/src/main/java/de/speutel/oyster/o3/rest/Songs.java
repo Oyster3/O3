@@ -1,4 +1,4 @@
-package de.nabcos.o3.rest;
+package de.speutel.oyster.o3.rest;
 
 import java.util.List;
 
@@ -14,8 +14,8 @@ import com.google.sitebricks.headless.Service;
 import com.google.sitebricks.http.Get;
 import com.google.sitebricks.http.Post;
 
-import de.nabcos.o3.Database;
-import de.nabcos.o3.model.Song;
+import de.speutel.oyster.o3.Database;
+import de.speutel.oyster.o3.model.Song;
 
 @At("/songs")
 @Service

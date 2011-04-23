@@ -1,9 +1,9 @@
-package de.nabcos.o3;
+package de.speutel.oyster.o3;
 
 import java.util.Collection;
 import java.util.List;
 
-import de.nabcos.o3.model.Song;
+import de.speutel.oyster.o3.model.Song;
 
 public interface Database {
 

@@ -1,4 +1,4 @@
-package de.nabcos.o3.indexer.file;
+package de.speutel.oyster.o3.indexer.file;
 
 import java.io.File;
 import java.net.URI;
@@ -9,9 +9,9 @@ import javax.inject.Named;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import de.nabcos.o3.Database;
-import de.nabcos.o3.Indexer;
-import de.nabcos.o3.model.Song;
+import de.speutel.oyster.o3.Database;
+import de.speutel.oyster.o3.Indexer;
+import de.speutel.oyster.o3.model.Song;
 
 @Named
 public class FileIndexer implements Indexer {

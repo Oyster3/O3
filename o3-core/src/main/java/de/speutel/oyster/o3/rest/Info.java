@@ -1,4 +1,4 @@
-package de.nabcos.o3.rest;
+package de.speutel.oyster.o3.rest;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -9,7 +9,7 @@ import com.google.sitebricks.headless.Reply;
 import com.google.sitebricks.headless.Service;
 import com.google.sitebricks.http.Get;
 
-import de.nabcos.o3.O3Info;
+import de.speutel.oyster.o3.O3Info;
 
 @At("/info")
 @Service

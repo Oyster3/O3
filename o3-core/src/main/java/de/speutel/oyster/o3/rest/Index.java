@@ -1,4 +1,4 @@
-package de.nabcos.o3.rest;
+package de.speutel.oyster.o3.rest;
 
 import java.net.URI;
 import java.util.List;
@@ -14,7 +14,7 @@ import com.google.sitebricks.headless.Service;
 import com.google.sitebricks.http.Get;
 import com.google.sitebricks.http.Post;
 
-import de.nabcos.o3.Indexer;
+import de.speutel.oyster.o3.Indexer;
 
 @At("/index")
 @Service

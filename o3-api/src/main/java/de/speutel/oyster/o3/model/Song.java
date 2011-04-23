@@ -1,4 +1,4 @@
-package de.nabcos.o3.model;
+package de.speutel.oyster.o3.model;
 
 public class Song {
 

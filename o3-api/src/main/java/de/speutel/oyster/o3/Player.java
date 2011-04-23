@@ -1,6 +1,6 @@
-package de.nabcos.o3;
+package de.speutel.oyster.o3;
 
-import de.nabcos.o3.model.Song;
+import de.speutel.oyster.o3.model.Song;
 
 public interface Player {
 

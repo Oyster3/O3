@@ -1,4 +1,4 @@
-package de.nabcos.o3;
+package de.speutel.oyster.o3;
 
 import java.util.Collection;
 import java.util.LinkedList;
@@ -8,7 +8,9 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
 
-import de.nabcos.o3.model.Song;
+import de.speutel.oyster.o3.Database;
+import de.speutel.oyster.o3.Order;
+import de.speutel.oyster.o3.model.Song;
 
 @Named
 @Singleton

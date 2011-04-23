@@ -1,4 +1,4 @@
-package de.nabcos.o3;
+package de.speutel.oyster.o3;
 
 import java.io.File;
 import java.util.List;
