@@ -11,6 +11,10 @@
 
   <modules>
     <module>o3-core</module> 
+    <module>o3-api</module>
+    <module>o3-db-simple</module>
+    <module>o3-indexer-file</module>
+    <module>o3-site</module>
   </modules>
 
   <properties>
@@ -44,7 +48,14 @@
     <dependency>
     	<groupId>org.sonatype.sisu</groupId>
     	<artifactId>sisu-inject-bean</artifactId>
-    	<version>2.2.0</version>
+    	<version>2.2.2</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.sonatype.sisu</groupId>
+    	<artifactId>sisu-sitebricks</artifactId>
+    	<version>0.0.1</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
     </dependency>
   </dependencies>
 </project>

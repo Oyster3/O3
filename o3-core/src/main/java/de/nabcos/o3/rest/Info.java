@@ -1,6 +1,7 @@
 package de.nabcos.o3.rest;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import com.google.sitebricks.At;
 import com.google.sitebricks.client.transport.Json;
@@ -12,6 +13,7 @@ import de.nabcos.o3.O3Info;
 
 @At("/info")
 @Service
+@Named
 public class Info {
 
 	private O3Info o3Info;
