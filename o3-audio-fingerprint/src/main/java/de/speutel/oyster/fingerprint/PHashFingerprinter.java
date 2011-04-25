@@ -1,21 +1,29 @@
 package de.speutel.oyster.fingerprint;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 import org.phash.AudioHash;
 import org.phash.pHash;
 
 public class PHashFingerprinter implements Fingerprinter {
 
-	public Fingerprint fingerprint(File file) {
-		Fingerprint fp = new Fingerprint();
+	private List<String> audioExtensions = Arrays.asList("mp3", "ogg", "flac");
 
-		if ( file.getName().endsWith("mp3") ) {
+	public Fingerprint fingerprint(File file) throws IOException {
+
+		int extPos = file.getName().lastIndexOf(".") + 1;
+		String ext = file.getName().substring(extPos);
+
+		System.err.println(ext);
+
+		if ( audioExtensions.contains(ext) ) {
 			AudioHash hash = pHash.audioHash(file.getAbsolutePath());
-			fp.setHash(hash);
+			return new Fingerprint(hash);
 		}
 
-		return fp;
+		return null;
 	}
-
 }

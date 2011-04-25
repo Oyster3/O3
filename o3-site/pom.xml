@@ -16,27 +16,18 @@
       <groupId>org.sonatype.sisu</groupId>
       <artifactId>sisu-sitebricks</artifactId>
       <version>0.0.1</version>
-      <type>jar</type>
-      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>de.speutel.oyster.o3</groupId>
       <artifactId>o3-core</artifactId>
-      <version>0.1-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>de.speutel.oyster.o3</groupId>
       <artifactId>o3-db-simple</artifactId>
-      <version>0.1-SNAPSHOT</version>
-      <type>jar</type>
-      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>de.speutel.oyster.o3</groupId>
       <artifactId>o3-indexer-file</artifactId>
-      <version>0.1-SNAPSHOT</version>
-      <type>jar</type>
-      <scope>compile</scope>
     </dependency>
   </dependencies>
 

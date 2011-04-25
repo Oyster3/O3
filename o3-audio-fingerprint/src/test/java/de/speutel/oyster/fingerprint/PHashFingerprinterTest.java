@@ -3,6 +3,7 @@ package de.speutel.oyster.fingerprint;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
+import java.io.IOException;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -17,12 +18,32 @@ public class PHashFingerprinterTest {
 	}
 
 	@Test
-	public void testFingerprint() {
+	public void testFingerprint() throws IOException {
 		File f = new File("src/test/resources/test.mp3");
+		File g = new File("src/test/resources/test.ogg");
+		File h = new File("src/test/resources/music.mp3");
+		File i = new File("src/test/resources/music.ogg");
 
-		Fingerprint fingerprint = new PHashFingerprinter().fingerprint(f);
+		assertTrue(f.exists());
+		assertTrue(g.exists());
+		assertTrue(h.exists());
+		assertTrue(i.exists());
 
-		System.err.println(fingerprint);
+		Fingerprint fHash = new PHashFingerprinter().fingerprint(f);
+		Fingerprint gHash = new PHashFingerprinter().fingerprint(g);
+		Fingerprint hHash = new PHashFingerprinter().fingerprint(h);
+		Fingerprint iHash = new PHashFingerprinter().fingerprint(i);
 
+		assertTrue(fHash.distance(fHash) > 0.99);
+		assertTrue(fHash.distance(gHash) > 0.98);
+		assertTrue(gHash.distance(fHash) > 0.98);
+		assertTrue(hHash.distance(iHash) > 0.98);
+		assertTrue(iHash.distance(hHash) > 0.98);
+
+		assertTrue(fHash.distance(hHash) < 0.3);
+		assertTrue(fHash.distance(iHash) < 0.3);
+		assertTrue(hHash.distance(fHash) < 0.3);
+		assertTrue(hHash.distance(gHash) < 0.3);
 	}
+
 }

@@ -31,6 +31,12 @@
       <scope>provided</scope>
     </dependency>
 
+    <dependency>
+      <groupId>org.sonatype.sisu</groupId>
+      <artifactId>sisu-inject-bean</artifactId>
+      <version>2.2.2</version>
+    </dependency>
+
     <!-- test dependencies -->
 
     <dependency>
@@ -42,21 +48,58 @@
 
     <dependency>
       <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
+      <artifactId>junit-dep</artifactId>
       <version>4.8.2</version>
       <scope>test</scope>
     </dependency>
+
     <dependency>
-    	<groupId>org.sonatype.sisu</groupId>
-    	<artifactId>sisu-inject-bean</artifactId>
-    	<version>2.2.2</version>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-core</artifactId>
+      <version>1.3.RC2</version>
+      <scope>test</scope>
     </dependency>
-    <dependency>
-    	<groupId>org.sonatype.sisu</groupId>
-    	<artifactId>sisu-sitebricks</artifactId>
-    	<version>0.0.1</version>
-    	<type>jar</type>
-    	<scope>compile</scope>
-    </dependency>
+
   </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+
+      <!-- MODULES -->
+
+      <dependency>
+        <groupId>de.speutel.oyster.o3</groupId>
+        <artifactId>o3-core</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>de.speutel.oyster.o3</groupId>
+        <artifactId>o3-db-simple</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>de.speutel.oyster.o3</groupId>
+        <artifactId>o3-indexer-file</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <!-- END MODULES -->
+
+    </dependencies>
+
+  </dependencyManagement>
+
+  <build>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plgins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>2.3.2</version>
+          <configuration>
+            <source>1.6</source>
+            <target>1.6</target>
+          </configuration>
+        </plugin>
+      </plugins>
+  </build>
 </project>
